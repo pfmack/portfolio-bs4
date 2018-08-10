@@ -1,0 +1,214 @@
+﻿/*** Base Styles ***/
+
+body
+{
+font-family: 'Montserrat', sans-serif;
+color: 0b0202;
+}
+
+/*** Header Styles ***/
+
+.hero-image  {
+	background-image: url("images/hero-image2.png"); 
+	background-size: cover;
+	height: 100vh;
+}
+
+#header .col-sm-6 {
+	padding: 50px;
+}
+
+.saluation, .introduction  {
+	color: white;
+}
+
+h1.saluation {
+	font-size: 150px; 
+	font-weight: bold;
+}
+
+h2.introduction {
+	font-size: 50px;
+	font-weight: bold;
+	padding-left: 10px; 
+}
+
+#header ul.list-unstyled {
+	font-size: 30px;
+	padding-left: 10px; 
+}
+
+span.colorful-text {
+	color: rgb(244,107,153);
+}
+
+
+/*** Navigation Styles ***/
+
+
+#navbar {
+	margin-left: 20px; 
+}
+
+ul.justify-content-end {
+	padding-left: 300px;
+}
+
+li.nav-item {
+	padding-left: 30px;
+	padding-top: 0;
+	font-size: 20px;
+}
+
+button.navbar-toggler {
+	background-color: rgba(176,51,95,.5);
+}
+
+
+/*** Section Styles ***/
+
+h1.section-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+#services h1 {
+	padding: 200px 0 50px 0;
+}
+
+/*** Services Section Styles ***/
+
+
+#services .col-sm-4{
+	padding-left: 150px; 
+	padding-bottom: 200px; 
+}
+
+p.small {
+	font-size: 25px;
+	text-align: justified;
+}
+
+/*** About Section Styles ***/
+
+
+#about h1 {
+	padding: 25px; 
+}
+#about .col-sm-6:first-child {
+	background-color: rgb(176,51,95);
+}
+
+#head-shot {
+	padding: 125px 50px 0 50px;
+}
+
+ h1 span.toolbox-header {
+	color: white;
+}
+
+#biography {
+	background-image: url("images/sos.png");
+	padding: 50px 50px;
+}
+
+#about p {
+	font-size: 20px;
+	line-height: 2;
+}
+
+#about .col-sm-12:last-of-type {
+	background-color: rgb(64,116,110);
+	
+}
+
+#about ul {
+	padding-left: 50px;
+}
+
+/*** Portfolio Section Styles ***/
+
+#portfolio .col-sm-6{ 
+	padding: 0;
+}
+
+#portfolio h1 {
+	padding: 200px 0 50px 0;
+}
+
+#portfolio h3, 
+#portfolio p {
+	padding-left: 25px;	
+}
+
+#portfolio h3 {
+	padding-top: 25px;
+}
+
+#portfolio p {
+	line-height: 2;
+}
+#portfolio .btn {
+	margin-left: 25px;
+}
+
+#portfolio-box-1{
+	background-color: rgb(176,51,95);
+}
+
+#portfolio-box-1 h3, #portfolio-box-1 p {
+	color: white;
+}
+
+#portfolio-box-2 {
+	background-image: url("images/sos.png");
+}
+
+#portfolio-box-4 {
+	background-color: rgb(64,116,110);
+}
+
+#portfolio-box-4 h3, #portfolio-box-4 p {
+	color: white;
+}
+
+#portfolio-box-5 {
+	background-color: rgb(176,51,95);
+}
+
+#portfolio-box-5 h3, #portfolio-box-5 p {
+	color: white;
+}
+
+/*** Contact Section Styles ***/
+#contact h1 {
+	padding: 200px 0 50px 0;
+}
+
+#contact {
+	background-image: url("images/sos.png");
+}
+
+.fab, .far {
+	font-size: 35px;
+	padding-left: 100px; 
+	padding-right: 25px;
+	color: rgb(64,116,110);
+}
+
+#contact {
+	padding-bottom: 100px;
+}
+
+/*** Footer Styles ***/
+
+#copyright {
+	background-color: rgb(64,116,110);
+	text-align: center;
+	padding: 25px;
+}
+
+#copyright p {
+	color: white; 
+}
