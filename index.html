@@ -9,6 +9,16 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:400,700" rel="stylesheet">
 	<link href="custom.css" rel="stylesheet">
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 <!-- Header section -->
@@ -16,17 +26,17 @@
 
 <!-- Navigation -->
 	<div class="container">
-			<nav class="navbar navbar-light navbar-expand-lg id="navbar">
-			<a class="navbar-brand" href="#"><img src="images/my-logo.png" class="img-fluid" alt="My Logo"></a>
+			<nav class="navbar fixed-top navbar-light navbar-expand-lg id="navbar">
+			<a class="navbar-brand" href="www.preciousmack.com"><img src="images/my-logo.png" id="logo-homepage" class="img-fluid" alt="My Logo"></a>
 			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
 				 <div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav justify-content-end">
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+					<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -37,10 +47,9 @@
 			<h1 class="saluation">Hi!</h1>
 			<h2 class="introduction">I'm Precious</h2>
 			<ul class="introduction list-unstyled">
-				<li>Librarian</li>
-				<li>Web Designer</li>
-				<li>Creative Web Developer</li>
-				<li><span class="colorful-text">Colorful </span> Unicorn</li>
+				<li class="title">Web Designer</li>
+				<li class="title">Front End Developer</li>
+				<li class="title"><span class="colorful-text">Colorful </span> Unicorn</li>
 			</ul>
 			</div>
 			<div class="col-sm-6">
@@ -54,22 +63,34 @@
 <!-- Services Section -->
 	<section id="services">
 		<div class="container-fluid">
-			<h1 class="section-title">Services</h1>
+			<h1 class="section-title">What I can do for you.</h1>
 			<div class="row">
 			<div class="col-sm-4">
 			<img src="images/code-icon.png" class="img-fluid"alt="Code Icon">
 			<br>
-			<p class="small"> Semantic HTML <br>&amp; Lean CSS</p>
+			<p class="small"> Design the website you want.</p>
+			<p class="services-summary">My goal is to tailor typography, copy, and graphics to convey your brand's message.</p>
 			</div>
 			<div class="col-sm-4">
 			<img src="images/psd-icon.png" class="img-fluid" alt="PSD Icon">
 			<br>
-			<p class="small">PSD to <br>Pixel-Perfect Code</p>
+			<p class="small">Develop the website you need.</p>
+			<p class="services-summary">I will build a website that provides a seamless user experience across multiple devices. </p>
 			</div>
 			<div class="col-sm-4">
 			<img src="images/gears-icon.png" class="img-fluid" alt="Gears Icon">
 			<br>
-			<p class="small">WordPress Customization</p>
+			<p class="small">Build the WordPress site you want <em>and</em> need.</p>
+			<p class="services-summary">Your new WordPress site will be easy to manage so you can focus on building your business.</p>
+			</div>
+		</div>
+			<div class="row justify-content-sm-center">
+			<div class="col-sm-auto">
+			<button type="button" class="btn btn-primary btn-lg"><a href="#contact"><span>Hire Me</span></a></button>
+			</div>
+			<div class="col-sm-auto">
+			<button type="button" class="btn btn-primary btn-lg"><a href="#contact"><span>Contact Me</span></a></button>
+			</div>
 			</div>
 		</div>
 	</section>
@@ -88,7 +109,7 @@
 						</p>
 						</div>
 							<div class="col-sm-12">
-								<h1 class="section-title"><span class="toolbox-header">Whats In My Toolbox</span></h1>
+								<h1 class="section-title"><span class="toolbox-header">What's In My Toolbox</span></h1>
 								<div class="row">
 									<div class="col-sm-4">
 										<ul class="icons list-unstyled">
@@ -118,44 +139,49 @@
 
 <!-- Portfolio Section -->
 	<section id="portfolio">
-		<div class="container">
-		<h1 class="section-title">Portfolio</h1>
+		<div class="container-fluid">
+		<h1 class="section-title">Selected Work</h1>
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 box-1">
 				<img src="images/simone-home1.png" class="img-fluid" alt="Swinging with Simone">
 				</div>
 				<div id="portfolio-box-1" class="col-sm-6">
 				<h3 class="project-title">Swinging with Simone<br>
-					WordPress Customization</h3><br>
-				<p class="project-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p><br>
-				<button type="button" class="btn btn-primary">Learn More</button>
+					WordPress Web Design</h3><br>
+				<p class="project-summary">Swinging with Simone is a WordPress web design project. I worked with my client to create a responsive, user-friendly site that reflected her fun and approachable brand and personality. Work on this site included theme and plugin installation and customization, custom html and css, e-commerce, newsletter integration and some graphic design using Adobe Photoshop.</p><br>
+				<div class="col-sm-3">
+				<button type="button" class="btn btn-primary"><a href="http://www.swingingwithsimone.com"><span>Launch Site</span></a></button>
+				</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-6" id="portfolio-box-2">
 				<h3 class="project-title">Rogue Pickings<br>
 					PSD to HTML5 &amp; CSS3</h3><br>
-				<p class="project-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p><br>
-				<button type="button" class="btn btn-primary">Learn More</button>
+				<p class="project-summary">Rogue Pickings is a homepage for an restaurant that focused on fresh ingredients was based off of a PSD design comp and hand coded in html and css. </p><br>
+				<div class="col-sm-3">
+				<button type="button" class="btn btn-primary"><a href="https://pfmack.github.io/rogue-pickings/"><span>Live Demo</span></a></button>
 				</div>
-				<div class="col-sm-6">
+				</div>
+				<div class="col-sm-6 box-2">
 				<img src="images/rogue-pickings.png" class="img-fluid" alt="Rogue Pickings">
 				</div>
 			</div>
-<!-- 
 			<div class="row">
-				<div class="col-sm-6">
-				<img src="images/holstee.png" class="img-fluid" alt="Holstee Manifesto">
+				<div class="col-sm-6 box-3">
+				<img src="images/holstee-manifesto.png" class="img-fluid" alt="Holstee Manifesto">
 				</div>
 				<div class="col-sm-6" id="portfolio-box-3">
 				<h3 class="project-title">Holstee Manifesto<br>
 					CSS Design</h3><br>
-				<p class="project-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p><br>
-				<button type="button" class="btn btn-primary">Learn More</button>
+				<p class="project-summary">This is my take on the Holstee Manifesto. It is hand coded in HTML5 and CSS3 using the Grand Hotel and Lato web fonts.</p><br>
+				<div class="col-sm-3">
+				<button type="button" class="btn btn-primary"><a href="https://codepen.io/pfmack/pen/djapqz"><span>View Demo</span></a></button>
+				</div>
 				</div>
 			</div>
--->
-			<div class="row">
+
+			<!-- <div class="row">
 				<div class="col-sm-6" id="portfolio-box-4">
 				<h3 class="project-title">Jublilee Austin<br>
 					PSD to HTML5 &amp; CSS3</h3><br>
@@ -165,17 +191,24 @@
 				<div class="col-sm-6">
 				<img src="images/jubaliee-austin.png" class="img-fluid" alt="Jubaliee Austin">
 				</div>
-			</div>
+			</div> -->
+
 			<div class="row">
-				<div class="col-sm-6">
-				<img src="images/wdb.png" class="img-fluid" alt="Wine Down Booksellers">
-				</div>
 				<div class="col-sm-6" id="portfolio-box-5">
 				<h3 class="project-title">Wine Down Booksellers<br>
 					Web &amp; Visual Design</h3><br>
-				<p class="project-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum .</p><br>
-				<button type="button" class="btn btn-primary">Learn More</button>
+				<p class="project-summary">Wine Down Booksellers is a web design project for a sample business venture in its early stages that I conceptualized. The main purpose of this site is to promote Wine Down Booksellers, a small independent book and wine merchant in NYC. The site should present the personality of the organization, market their goods, services and events, and encourage visitors to come to their physical location.</p><br>
+				<div class="col-sm-3">
+				<button type="button" class="btn btn-primary"><span><a href="wine-down-booksellers.html">Learn More</a></span></button>
 				</div>
+				</div>
+				<div class="col-sm-6 box-5">
+				<img src="images/wine-down-booksellers.png" class="img-fluid" alt="Wine Down Booksellers">
+				</div>
+			</div>
+			<div class="row">
+			<div class="col-lg-auto">
+			<button type="button" class="btn btn-primary btn-lg btn-block"><span>View More</span></button>
 			</div>
 		</div>
 	</section>
@@ -187,6 +220,10 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<form class="form-group">
+					<form action="http://www.preciousmack.com/cgi-bin/FormMail.pl" method="post">
+					<input type="hidden" name="recipient" value="pmack@preciousmack.com" / >
+					<input type="hidden" name="subject" value="From the feedback form" / >
+
 						<div class="input-group">
 						<span class="input-group-text">Your Name</span>		
 						<input id="name" type="text" name="yourname" class="form-control"  required>
@@ -207,11 +244,10 @@
 				</div>
 				<div class="col-sm-6">
 					<ul class="social-media list-unstyled">
-						<li><a href="#"><i class="fab fa-facebook-square"></i>precious.mack6610</a></li>
-						<li><a href="#"><i class="fab fa-twitter-square"></i>@preshmack</a></li>
-						<li><a href="#"><i class="fab fa-linkedin"></i>preciousmack</a></li>
-						<li><a href="#"><i class="fab fa-github-square"></i>pmack</a></li>
-						<li><a href="#"><i class="far fa-envelope-open"></i>pmack@preciousmack.com</a></li>
+						<li><a href="https://twitter.com/geekytechiechic"><i class="fab fa-twitter-square"></i>@geekytechiechic</a></li>
+						<li><a href="https://www.linkedin.com/in/preciousmack/"><i class="fab fa-linkedin"></i>preciousmack</a></li>
+						<li><a href="https://github.com/pfmack"><i class="fab fa-github-square"></i>pmack</a></li>
+						<li><a href="mailto:pmack@preciousmack.com"><i class="far fa-envelope-open"></i>pmack@preciousmack.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -227,12 +263,7 @@
 </footer>
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

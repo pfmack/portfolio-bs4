@@ -15,7 +15,7 @@ color: 0b0202;
 }
 
 #header .col-sm-6 {
-	padding: 50px;
+	padding-top: 25px;
 }
 
 .saluation, .introduction  {
@@ -25,12 +25,13 @@ color: 0b0202;
 h1.saluation {
 	font-size: 150px; 
 	font-weight: bold;
+	padding-top: 150px; 
 }
 
 h2.introduction {
 	font-size: 50px;
-	font-weight: bold;
-	padding-left: 10px; 
+	font-weight: bold; 
+	padding-right: 200px; 
 }
 
 #header ul.list-unstyled {
@@ -39,7 +40,38 @@ h2.introduction {
 }
 
 span.colorful-text {
-	color: rgb(244,107,153);
+	-webkit-animation-name: colorful; /*Safari 4.0 - 8.0*/
+	-webkit-animation-duration: 5s;
+	-webkit-animiation-iteration-count: infinite;
+	animation-name: colorful;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	/***color: rgb(244,107,153);***/
+}
+
+@-webkit-keyframes colorful { /*Safari 4.0 - 8.0*/
+	from {
+		color: rgb(244,107,153);
+	}
+	to {
+		color: #F7EE74;
+	}
+}
+
+@keyframes colorful {
+	from {
+		color: rgb(244,107,153);
+	}
+	to {
+		color: #F7EE74;
+	}
+}
+
+/*** Branding ***/
+
+#logo-homepage {
+	max-width: 75%;
+	padding-left: 100px;
 }
 
 
@@ -48,6 +80,10 @@ span.colorful-text {
 
 #navbar {
 	margin-left: 20px; 
+}
+
+#header .nav-link:hover{
+	color: #F5DEB3;
 }
 
 ul.justify-content-end {
@@ -64,30 +100,106 @@ button.navbar-toggler {
 	background-color: rgba(176,51,95,.5);
 }
 
+.fixed-top {
+  transition: background-color 200ms linear;
+}
+
+
+/*** Button Styles ***/
+
+.btn {
+	background-color: rgb(64,116,110);
+	transition: all 0.5s;
+    cursor: pointer;
+	display: inline-block;
+    position: relative;
+}
+
+ .btn:hover, #portfolio .btn:hover, #portfolio .btn-block:hover {
+	background-color: rgb(176,51,95);
+}
+
+ .btn span:after, #portfolio .btn span:after, #portfolio .btn-block span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 10px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+ .btn:hover span, #portfolio .btn:hover span, #portfolio .btn-block:hover span {
+  padding-right: 25px;
+}
+
+ .btn:hover span:after, #portfolio .btn:hover span:after, #portfolio .btn-block:hover span:after {
+  opacity: 1;
+  right: 25px;
+  top: 10px;
+}
 
 /*** Section Styles ***/
 
 h1.section-title {
+	color: rgb(64,116,110);
 	font-family: 'Playfair Display', serif;
-	font-size: 48px;
+	font-weight: bold;
+	font-size: 35;
 	text-align: center;
 }
 
 #services h1 {
-	padding: 200px 0 50px 0;
+	padding: 100px 0 100px 0;
 }
 
 /*** Services Section Styles ***/
 
+#services .row {
+	padding-right: 150px;
+}
 
 #services .col-sm-4{
 	padding-left: 150px; 
-	padding-bottom: 200px; 
 }
 
 p.small {
-	font-size: 25px;
-	text-align: justified;
+	color: rgb(64,116,110);
+	font-size: 20px;
+	text-align: center;
+}
+
+p.services-summary {
+	font-size: 20px;
+	text-align: center;
+}
+
+#services .img-fluid {
+	padding-left: 50px;
+	padding-bottom: 15px;
+	max-width: 75%;
+}
+
+#services .col-sm-auto {
+	padding-top: 50px;
+	padding-bottom: 200px;
+	padding-left: 125px;
+}
+
+#services a {
+	text-decoration: none;
+	color: white; 
+}
+
+#services .btn span:after {
+  top: 10px;
+  right: -10px;
+}
+
+
+#services .btn:hover span:after {
+  opacity: 1;
+  right: 25px;
+  top: 10px;
 }
 
 /*** About Section Styles ***/
@@ -98,10 +210,17 @@ p.small {
 }
 #about .col-sm-6:first-child {
 	background-color: rgb(176,51,95);
+	display: flex;
+	justify-content: center;
 }
 
 #head-shot {
-	padding: 125px 50px 0 50px;
+	padding: 100px 50px 0 50px;
+}
+
+#about .img-fluid{
+	max-width: 75%;
+	align-self: flex-start;
 }
 
  h1 span.toolbox-header {
@@ -116,74 +235,119 @@ p.small {
 #about p {
 	font-size: 20px;
 	line-height: 2;
+	padding: 0 50px;
 }
 
 #about .col-sm-12:last-of-type {
 	background-color: rgb(64,116,110);
-	
 }
 
 #about ul {
 	padding-left: 50px;
 }
 
+#about li .img-fluid {
+	max-width: 35%;
+}
+
 /*** Portfolio Section Styles ***/
 
 #portfolio .col-sm-6{ 
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #portfolio h1 {
-	padding: 200px 0 50px 0;
-}
-
-#portfolio h3, 
-#portfolio p {
-	padding-left: 25px;	
+	padding: 100px 0 100px 0;
 }
 
 #portfolio h3 {
-	padding-top: 25px;
+	padding: 25px 75px 0;
+	font-weight: bold;
 }
+
 
 #portfolio p {
 	line-height: 2;
+	padding: 15px 75px;
 }
 #portfolio .btn {
-	margin-left: 25px;
+	margin-left: 75px;
+	background-color: rgb(64,116,110);
+	margin-bottom: 25px;
 }
 
-#portfolio-box-1{
+#portfolio .btn span:after {
+	top: 5px;
+  right: -10px;
+}
+
+#portfolio .btn:hover span:after {
+  opacity: 1;
+  right: 25px;
+  top: 5px;
+}
+
+#portfolio .col-lg-auto {
+	margin-left: 500px;
+	padding-bottom: 50px;
+}
+
+#portfolio .btn-block {
+	margin-top: 50px;
+}
+#portfolio .img-fluid {
+	max-width: 80%;
+	align-self: flex-start;
+	padding: 50px 0 50px 100px;
+}
+
+#portfolio .box-1{
 	background-color: rgb(176,51,95);
 }
 
-#portfolio-box-1 h3, #portfolio-box-1 p {
-	color: white;
+#portfolio h3, p {
+	color: grey;
 }
 
-#portfolio-box-2 {
+#portfolio .box-2 {
 	background-image: url("images/sos.png");
 }
 
-#portfolio-box-4 {
-	background-color: rgb(64,116,110);
+#portfolio .box-3 {
+	background-color:  rgb(64,116,110);
 }
 
-#portfolio-box-4 h3, #portfolio-box-4 p {
-	color: white;
-}
-
-#portfolio-box-5 {
+#portfolio .box-5 {
 	background-color: rgb(176,51,95);
 }
 
-#portfolio-box-5 h3, #portfolio-box-5 p {
-	color: white;
+#portfolio .box-6 {
+	background-image: url("images/sos.png");
+}
+
+#portfolio .box-7 {
+	background-color:  rgb(64,116,110);
+}
+
+#portfolio .box-8 {
+	background-color:  rgb(176,51,95);
+}
+
+#portfolio .box-9 {
+	background-color:   rgb(64,116,110);
+}
+
+
+#portfolio a {
+	text-decoration: none;
+	color: white; 
 }
 
 /*** Contact Section Styles ***/
 #contact h1 {
-	padding: 200px 0 50px 0;
+	padding: 100px 0 100px 0;
 }
 
 #contact {
@@ -212,3 +376,71 @@ p.small {
 #copyright p {
 	color: white; 
 }
+
+/*** Portfolio Project Page Styles ***/
+
+.project-image  {
+	background-image: url("images/project-header.png"); 
+	background-size: cover;
+	height: 50vh;
+}
+
+.project-image h1, h2 {
+	color: white;
+	text-align: center;
+}
+
+#portfolio h3.project-title  {
+	padding-left: 100px;
+	padding-top: 50px;
+}
+#logo {
+	max-width: 75%;
+	padding-left: 50px;
+}
+
+#project-title {
+	padding-top: 150px;
+}
+
+#project-nav .nav-link{
+	color: white; 
+}
+
+#portfolio .project-summary {
+	padding: 100px; 
+}
+
+#portfolio img {
+	position: absolute;
+}
+
+#portfolio {
+	position: relative;
+}
+
+
+
+.bottom  {
+	animation-name: imagefade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alterante;
+}
+
+@keyframes imagefade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}	
+
